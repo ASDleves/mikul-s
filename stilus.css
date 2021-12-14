@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+body {
+    background-image: url(mikulas/kepek/hatter.jpg);
+}
+
+header {
+    font-family: cursive;
+    grid-area: h;
+    background-image: url(mikulas/kepek/fejlec.jpg);
+    text-align: center;
+    height: 550px;
+    padding: 60px;
+}
+header h1 {
+    font-weight: bold;
+    color: red;
+}
+
+aside {
+    grid-area: as;
+}
+
+nav {
+    background-color: red;
+    grid-area: n;
+    height: 50px;
+    text-align: justify;
+    font-weight: bold;
+}
+nav li {
+    list-style-type: none;
+    padding: 5px;
+    text-align: center;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-top: 1px white;
+    border-bottom: 1px white;
+}
+nav li a {
+    color: white;
+}
+li a:hover {
+    background-color: green;
+}
+nav li a {
+    text-decoration: none;
+}
+
+article {
+    grid-area: a;
+    background-color: navajowhite;
+}
+article img {
+    float: right;
+    text-decoration-color: #ff1a1a;
+    border-radius: 5px;
+    -webkit-box-shadow: 5px 5px 7px 5px #000000, 5px 5px 7px 5px #000000;
+    box-shadow: 5px 5px 7px 5px #000000, 5px 5px 7px 5px #000000;
+}
+article h1 {
+    font-family: "Trebuchet MS", "Helvetica", sans-serif;
+    color: red;
+}
+article p {
+    font-size: 10px;
+}
+
+footer {
+    grid-area: f;
+}
+main {
+    background-color: gray;
+    display: grid;
+    width: 80%;
+    max-width: 1000px;
+    grid-template-areas:
+        "h  h  h"
+        "n  n  n"
+        "as a  a"
+        "f  f  f";
+    margin: auto;
+}
+aside img {
+    width: 100%;
+}
+footer {
+    background-color: red;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    main {
+        grid-template-areas:
+            "h"
+            "n"
+            "a"
+            "as"
+            "f";
+        grid-template-columns: 1fr;
+    }
+}
